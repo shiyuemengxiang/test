@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>下划线扩散</title>
+	<style type="text/css">
+		*{
+			padding:0;
+			margin:0;
+		}
+	/*	div{
+			width:400px;
+			height:30px;
+			position: relative;
+		}*/
+		div h1{
+			width:400px;
+			margin:auto;
+			color:purple;
+			position: relative;
+		}
+		/*h1的after样式*/
+		div h1:after{
+			content: "";
+			width:0;
+			height:5px;
+			position: absolute;
+			background:#66ffff;
+			left:50%;/*在h1的中间*/
+			top:100%;/*排在h1下方*/
+			transition:all 0.8s;/*动画作用时间*/
+		}
+		/*h1滑过之后样式*/
+		div h1:hover:after{
+			width:100%;
+			left:0;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<h1>鼠标滑动有奇迹你信不信!!!</h1>
+	</div>
+</body>
+</html>
